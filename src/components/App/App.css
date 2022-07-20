@@ -10,10 +10,42 @@
 .App .generic-page {
   display: flex;
   height: calc(100vh - 80px);
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
 }
 .App .generic-page h1 {
   font-size: 72px;
   text-align: center;
+  margin: 50px 0;
+}
+.App .generic-page .card {
+  width: 500px;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.App .generic-page .card h2 {
+  margin-bottom: 20px;
+}
+.App .generic-page .card form input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+.App .generic-page .card form input[type=submit] {
+  background-color: green;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  margin-top: 15px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.App .generic-page .card form input[type=submit]:hover {
+  background-color: rgb(1, 165, 1);
 }

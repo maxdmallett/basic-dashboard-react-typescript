@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import * as AiIcons from "react-icons/ai";
 import { SidebarData } from './SidebarData';
+import './Sidebar.css';
 
 interface Props {
-    sidebar: boolean
-    toggleSidebar: any
+    sidebar: boolean;
+    toggleSidebar: any;
 }
 
 function Sidebar(props: Props) {
