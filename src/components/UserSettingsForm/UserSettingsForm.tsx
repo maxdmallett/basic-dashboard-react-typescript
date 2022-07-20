@@ -7,12 +7,12 @@ function UserSettingsForm() {
     const [userNameLocal, setUserNameLocal] = useState(userName);
     const [userAgeLocal, setUserAgeLocal] = useState(String(userAge));
 
-    const updateName = (event: any) => {
+    const updateName = (event: { target: HTMLInputElement; }) => {
         const value = event.target.value;
         setUserNameLocal(value);
     }
 
-    const updateAge = (event: any) => {
+    const updateAge = (event: { target: HTMLInputElement; }) => {
         const value = event.target.value;
         setUserAgeLocal(value);
     }
