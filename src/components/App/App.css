@@ -34,7 +34,11 @@
   padding: 15px;
   font-size: 15px;
 }
-.App .generic-page .card form input[type=submit] {
+.App .generic-page .btn-primary {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+  font-size: 15px;
   background-color: green;
   border: none;
   color: white;
@@ -47,6 +51,23 @@
   cursor: pointer;
   text-transform: uppercase;
 }
-.App .generic-page .card form input[type=submit]:hover {
+.App .generic-page .btn-primary:hover {
   background-color: rgb(1, 165, 1);
+}
+.App .generic-page .user-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.App .generic-page .user-info .text {
+  margin-left: 15px;
+}
+.App .generic-page .user-info .text .name {
+  font-size: 24px;
+}
+.App .generic-page .user-info .text .age {
+  font-size: 16px;
+  color: #27a39f;
+  font-style: italic;
 }

@@ -4,7 +4,7 @@ import * as IoIcons from "react-icons/io";
 import Home from "../../pages/home";
 import Assessments from "../../pages/assessments";
 import Monitoring from "../../pages/monitoring";
-import Reports from "../../pages/reports";
+import APITest from "../../pages/apiTest";
 import Settings from "../../pages/settings";
 
 interface PageObj {
@@ -38,11 +38,11 @@ export const SidebarData: PageObj[] = [
         element: <Monitoring/>,
     },
     {
-        title: 'Reports',
-        path: '/reports',
+        title: 'API Test',
+        path: '/apiTest',
         icon: <AiIcons.AiFillBook/>,
         cName: 'sidebar-text',
-        element: <Reports/>,
+        element: <APITest/>,
     },
     {
         title: 'Settings',

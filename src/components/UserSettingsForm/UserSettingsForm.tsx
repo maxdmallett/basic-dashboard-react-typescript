@@ -27,7 +27,7 @@ function UserSettingsForm() {
         <form onSubmit={handleSubmit} >
             <input type="text" placeholder='Your name' name='userName' value={userNameLocal} onChange={updateName}/>
             <input type="number" placeholder='Your age' name='userAge' value={userAgeLocal} onChange={updateAge} />
-            <input type="submit"/>
+            <input type="submit" className='btn-primary'/>
         </form>
     )
 }
