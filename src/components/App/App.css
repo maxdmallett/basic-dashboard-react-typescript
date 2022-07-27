@@ -51,6 +51,14 @@
   cursor: pointer;
   text-transform: uppercase;
 }
+.App .generic-page .btn-primary.fetching {
+  opacity: 0.5;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 .App .generic-page .btn-primary:hover {
   background-color: rgb(1, 165, 1);
 }

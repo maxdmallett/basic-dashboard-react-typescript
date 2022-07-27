@@ -14,7 +14,7 @@ interface IUserData {
 }
 
 const APITest = () => {
-
+    const [loading, setLoading] = useState(true);
     const [fetching, setFetching] = useState(false);
     const [userData, setUserData] = useState<IUserData | null>(null);
 
@@ -32,12 +32,14 @@ const APITest = () => {
                     name: data.results[0].name,
                     age: data.results[0].dob.age,
                     gender: data.results[0].gender,
-                    picture: data.results[0].picture.medium
+                    picture: data.results[0].picture.large
                 });
                 setFetching(false);
+                setLoading(false);
             }).catch(error => {
                 console.error(error);
                 setFetching(false);
+                setLoading(false);
             });
     }
 
@@ -45,11 +47,11 @@ const APITest = () => {
         fetchData();
     }, []);
 
-    if (fetching) {
+    if (loading) {
         return (
             <div className='generic-page'>
                 <h1>API Test</h1>
-                <p>Fetching...</p>
+                <p>Loading...</p>
             </div>
         )
     }
@@ -78,7 +80,8 @@ const APITest = () => {
                     
                 </div>
 
-                <button onClick={handleClick} className="btn-primary">Fetch new user</button>
+                {!fetching && <button onClick={handleClick} className="btn-primary">Fetch new user</button>}
+                {fetching && <button className="btn-primary fetching">Fetching...</button>}
 
             </div>
 

@@ -59,6 +59,12 @@
             cursor: pointer;
             text-transform: uppercase;
 
+            &.fetching {
+                opacity: 0.5;
+                pointer-events: none;
+                user-select: none;
+            }
+
             &:hover {
                 background-color: rgb(1, 165, 1);
             }
